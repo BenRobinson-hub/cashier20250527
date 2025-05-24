@@ -16,6 +16,17 @@ module.exports = {
     runtimeCompiler: true,
     productionSourceMap: false,
     devServer: {
+		"https" : false,
+		               proxy: {
+		                 // 代理规则：所有以 /design/cashierapi 开头的请求，转发到 https://c.zooyuan.com
+		                 '/dbp/cashierapi': {
+		                   target: 'https://dbp.naturecare.top', // 目标服务器地址
+		                   changeOrigin: true,             // 修改请求头中的 Host 为目标域名
+		                   pathRewrite: {
+		                     '^/dbp/cashierapi': '/dbp/cashierapi' // 保持路径不变（关键！）
+		                   }
+		                 }
+		               },
         publicPath: Setting.publicPath
     },
     css: {

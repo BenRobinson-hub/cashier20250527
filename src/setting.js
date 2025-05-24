@@ -36,7 +36,7 @@ const Setting = {
      * */
     roterPre,
     // 网页标题的后缀
-    titleSuffix: util.cookies.get('pageTitle') || 'CRMEB',
+    titleSuffix: util.cookies.get('pageTitle') || 'DBP',
     // 路由模式，可选值为 history 或 hash
     routerMode: setting.isAPP ? 'hash' : 'history',
     // 页面切换时，是否显示模拟的进度条
