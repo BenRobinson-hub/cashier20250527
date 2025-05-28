@@ -573,7 +573,7 @@ export function writeCartList(data) {
 export function putWriteUpdate(id, data) {
     return request({
         url: `order/write_off/${id}`,
-        method: 'put',
+        method: 'post',
         data
     });
 }
