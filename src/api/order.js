@@ -698,7 +698,7 @@ export function getVerifyList(data) {
 export function writeUpdate(id) {
     return request({
         url: `/order/write_off/${id}`,
-        method: 'put',
+        method: 'post',
     });
 }
 
